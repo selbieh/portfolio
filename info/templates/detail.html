@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+  <title>Portfolio Sayed Mohamed </title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media-queries.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+   <!-- Script
+   ================================================== -->
+  <script src="{% static 'js/modernizr.js' %}"></script>
+
+   <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+    <!-- Start Navbar --->
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size: 19px;">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/">Sayed Mohamed <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item" style="margin-left: 10px;">
+	        <a class="nav-link" href="/">Home</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+
+<!-- Start Section Card --->
+
+ <section id="portfolio">
+
+      <div class="row" style="margin-left: auto; margin-right: auto">
+
+         <div class="twelve columns collapsed" style="margin-top: -5%;">
+
+            <h1 style="margin-bottom: 26px;">Detail Your Projects.</h1>
+
+
+            <div class="card" style="background-color: #fff">
+			  <img src="{{ project.image.url }}" class="card-img-top" alt="...">
+			  <div class="card-body" style="font-size: 18px;padding: 3.25rem;">
+			    <h5 class="card-title">{{project.title}}</h5>
+			    <p class="card-text">{{project.description|safe}}</p>
+          {% if project.link %}
+			    <a href="{{project.link}}" class="link-ref">Demo Live Frontend</a>
+          {% endif %}
+          {% if project.link_back  %}
+          <a href="{{project.link_back}}" class="link-ref">Demo Live Backend</a>
+          {% endif %}
+			    <a href="{{project.code_link}}" class="link-ref">Demo Code</a>
+			  </div>
+			</div>
+
+
+         </div> <!-- twelve columns end -->
+
+
+      </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+<!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="https://www.facebook.com/youssef.elbieh"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="mailto:Selbieh@gmail.com"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/sayed-elbieh-892a6917a/">
+                <i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://github.com/selbieh?tab=repositories"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://stackoverflow.com/users/9535120/youssef?tab=profile"><i class="fa fa-stack-overflow"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; Copyright 2020</li>
+               <li>Design by <a title="Styleshout" href="/">Sayed Mohamed</a></li>   
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+
+	<script src="{% static 'js/jquery.flexslider.js' %}"></script>
+	<script src="{% static 'js/waypoints.js' %}"></script>
+	<script src="{% static 'js/jquery.fittext.js' %}"></script>
+	<script src="{% static 'js/magnific-popup.js' %}"></script>
+	<script src="{% static 'js/init.js' %}"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
